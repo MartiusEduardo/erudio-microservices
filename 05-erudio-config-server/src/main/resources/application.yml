@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: erudio-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MartiusEduardo/erudio-config-server
+          #username: usuário
+          #password: senha
+          default-label: main #o git mudou sua branch principal de master para main
+          search-paths:
+          - 'greeting-service*'
